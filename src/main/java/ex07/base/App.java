@@ -35,6 +35,22 @@ public class App {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
 
-        
+        System.out.println("How many people?");
+        int people = in.nextInt();
+
+        System.out.println("How many pizzas do you have?");
+        int pizzas = in.nextInt();
+
+        System.out.println("How many slices per pizza?");
+        int slicesPerPizza = in.nextInt();
+
+        System.out.println(people + " people with " + pizzas + " pizzas (" +(slicesPerPizza*pizzas)+ " slices)");
+
+        int quotient = (slicesPerPizza * pizzas) % people;
+
+
+        System.out.println("Each person gets " + ((slicesPerPizza * pizzas) / people) + " pieces of pizza.\n" +
+                "There are " + quotient +" leftover pieces");
+
     }
 }
